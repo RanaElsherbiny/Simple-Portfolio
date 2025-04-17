@@ -1,0 +1,422 @@
+html {
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #97b3ce; /* Light background */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+header {
+    background: #42668a; /* Darker blue */
+    color: #ffffff; /* White text */
+    padding: 5px; /* Original padding */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed; /* Make the header fixed */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    z-index: 1000; /* Ensure it stays on top */
+    transition: background 0.3s ease; /* Smooth header background transition */
+    overflow: hidden; /* Prevent overflow content */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Keep original layout */
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header-info {
+    text-align: left;
+    font-size: 16px; /* Adjusted size for balance */
+}
+
+.header-info h1 {
+    font-size: 24px; /* Name size */
+    margin: 0;
+    color: #ffffff; 
+}
+
+.header-info h2 {
+    font-size: 18px; /* Job title size */
+    margin: 5px 0;
+    color: #ffffff; 
+}
+
+.contact-icons {
+    margin-top: 5px;
+}
+
+.contact-icons i {
+    margin-right: 10px; /* Space between icons */
+    color: #ffffff; /* White icon color */
+}
+
+.contact-icons span {
+    margin-right: 20px; /* Space between email and phone */
+    color: #ffffff; /* White text */
+}
+
+nav {
+    background: #5280ad; /* Medium blue */
+    color: #ffffff; /* White text */
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: #ffffff; /* White text */
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s; /* Smooth color and scale transition */
+    font-size: 16px; /* Menu size */
+}
+nav a i {
+    font-size: 20px; /* Size of the icon */
+    margin-right: 5px; /* Space between icon and text */
+}
+nav a:hover,i:hover {
+    color: #7599bd; /* Light blue on hover */
+    transform: scale(1.1); /* Enlarge on hover */
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Optional text shadow */
+}
+section {
+    padding: 20px;
+    margin: 10px;
+    background: #ffffff; /* White background for sections */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Start hidden for animation */
+    transform: translateY(20px); /* Start slightly lower */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Smooth transition */
+}
+
+section.visible {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Move to original position */
+}
+
+h1, h2 {
+    color: #42668a; /* Darker blue for headings */
+    margin-bottom: 10px;
+}
+#about{
+    margin-top: 125px;
+}
+.about-me {
+    padding-top: 20px;
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+.about-me img {
+    border-radius: 50%; /* Circular image */
+    width: 150px; /* Image width */
+    height: 150px; /* Image height */
+    margin-right: 20px; /* Space between image and text */
+}
+.skills {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: space-between; /* Distribute space evenly */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #d0cdcd;
+}
+.skills h3{
+    margin: 0;
+    padding: 0;
+    font-size: larger;
+    font-weight: bolder;
+}
+.skills li {
+    background: #5280ad; /* Light blue */
+    padding: 18px;
+    border-radius: 5px;
+    margin: 10px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Center the content */
+    display: flex;
+    flex: 1 1 calc(33.33% - 20px); /* Three boxes, with space for margins */
+    max-width: 350px;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    transition: transform 0.3s; /* Smooth scale transition */
+}
+.skills li i {
+    font-size: 50px;
+    color: #ffffff;
+    margin-bottom: 2px;
+}
+
+.skills li:hover {
+    transform: scale(1.15); /* Slightly enlarge on hover */
+    box-shadow: 1 2px 5px rgba(0, 0, 0, 0.3);
+}
+.projects {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.projects li {
+    background: #ffffff; /* White background for clarity */
+    padding: 15px;
+    border: 1px solid #e3bcbc; /* Light border */
+    border-radius: 5px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; /* Smooth scale transition */
+}
+.projects li:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+.projects li h3 {
+    margin: 0 0 5px;
+    color: #42668a; /* Darker blue for project titles */
+}
+.projects li p {
+    margin: 5px 0;
+    color: #7a7a7a; /* Darker gray for text */
+}
+.recommendations {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center the cards */
+}
+.recommendations li {
+    background-color: #ededed;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px;
+    width: 290px; /* Fixed width for uniformity */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s; /* Smooth scale transition */
+}
+.recommendation-form input[type="text"] {
+    background-color: #f9f9f9; /* Light background */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Match the border radius */
+    padding: 10px; /* Padding for better spacing */
+    width: calc(50% - 22px); /* Full width minus padding and border */
+    margin-bottom: 10px; /* Space between input and textarea */
+    font-size: 16px; /* Font size for readability */
+}
+
+.recommendation-form textarea {
+    background-color: #f9f9f9; /* Consistent background */
+    border: 1px solid #ccc; /* Consistent border */
+    border-radius: 5px; /* Match the border radius */
+    padding: 10px; /* Padding for better spacing */
+    width: calc(50% - 22px); /* Full width minus padding and border */
+    font-size: 16px; /* Font size for readability */
+}
+.recommendations li:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+#recommendations .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Sit on top */
+    left: 50%; /* Center it horizontally */
+    top: 50%; /* Center it vertically */
+    transform: translate(-50%, -50%); /* Offsets it to perfectly center */
+    width: 300px; /* Fixed width for the modal */
+    height: auto; /* Allow height to adjust based on content */
+    background-color: #f76a52; /* Background color (tomato) */
+    color: #ffffff; /* White text */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Floating effect */
+    padding: 15px; /* Padding around content */
+    border-radius: 8px; /* Rounded corners */
+    overflow: auto; /* Allow scrolling if needed */
+}
+
+/* Modal content (box) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    text-align: center;
+
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.recommendation-form {
+    margin-top: 20px;
+    text-align: center; /* Center the form elements */
+}
+.stars {
+    color: rgb(255, 77, 0);
+    margin-bottom: 10px;
+}
+textarea {
+    width: 65%; /* Original width */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+    margin: 0 auto; /* Center horizontally */
+    display: block; /* Allow margin auto to center */
+    height: 80px; /* Original height */
+}
+button {
+    background-color: #42668a; /* Darker blue */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth background color and scale transition */
+    margin-top: 10px; /* Adjusted top margin */
+}
+button:hover {
+    background-color: #5280ad; /* Medium blue on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: transparent; /* Transparent background */
+    border: none; /* No border */
+    padding: 10px 15px; /* Add padding for better click area */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Change font family */
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black; /* Change text color on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background on hover */
+    text-decoration: none; /* No underline */
+    outline: none; /* Remove outline on focus */
+    cursor: pointer; /* Pointer cursor */
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #42668a; /* Darker blue */
+    color: #d0cdcd;
+    position: relative;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+.footer-icons {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the icons */
+}
+
+.footer-icons a {
+    display: inline-block; /* Ensure links wrap around the icons */
+    margin: 15px 15px; /* Space between icons */
+}
+
+.footer-icons i {
+    color: #d0cdcd; /* Icon color */
+    font-size: 22px; /* Icon size */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.footer-icons i:hover {
+    color: #d0cdcd; /* Keep color the same on hover */
+    transform: none; /* Prevent scaling or changes on hover */
+}
+
+@media (max-width: 800px) {
+    .header-content {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items */
+    }
+
+    .header-info {
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .header-info h1 {
+        font-size: 20px; /* Adjust size for smaller screens */
+    }
+
+    .header-info h2 {
+        font-size: 16px; /* Adjust size for smaller screens */
+    }
+
+    nav a {
+        font-size: 14px; /* Smaller font size for navigation on small screens */
+        margin: 5px 0; /* Space between links */
+    }
+    .skills li {
+        flex: 1 1 calc(50% - 20px); /* Two boxes on medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    
+    .header-info h1 {
+        font-size: 18px; /* Further adjust size for small screens */
+    }
+
+    .header-info h2 {
+        font-size: 14px; /* Further adjust size for small screens */
+       
+    }
+    nav a {
+        margin: 0 2px; /* Increase space between links */
+        font-size: 15px; /* Increase font size for better readability */
+        padding: 8px 0; /* Add padding for larger clickable area */
+    }
+    nav a:hover,i:hover {
+        color: #7599bd; /* Light blue on hover */
+        transform: scale(1.0); /* Enlarge on hover */
+        font-size: 17px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Optional text shadow */
+    }
+    .skills li {
+        flex: 1 1 100%; /* Stacks items on small screens */
+    }
+  
+
+}

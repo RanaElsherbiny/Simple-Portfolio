@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John wiliam</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+
+<header id="header">
+    <div class="header-content">
+        <div class="header-info">
+            <h1>John wiliam </h1>
+            <h2> Full Stack Developer</h2>
+            <div class="contact-icons">
+                <i class="fas fa-envelope"></i><span>John.wiliam@example.com</span>
+                <i class="fas fa-phone-alt"></i><span>(000) 0000-0000</span>
+            </div>
+        </div>
+        <nav>
+            <a href="#" id="home-link">
+                <i class="fas fa-home"></i>
+            </a>
+            <a href="#about">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#recommendations">Recommendations</a>
+        </nav>
+    </div>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <div class="about-me">
+        <img src="image/man.png" alt="Jane Doe">
+        <p>I am a passionate developer with a strong foundation in both front-end and back-end technologies. With a focus on creating seamless user experiences, I enjoy transforming ideas into functional applications. My journey includes working with frameworks such as React and Node.js, and I'm always eager to learn new technologies to enhance my skill set.</p>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills">
+        <li>
+            <i class="fab fa-html5 skill-icon"></i>
+            <h3>HTML</h3> <br> 3 years experience
+        </li>
+        <li>
+            <i class="fab fa-css3-alt skill-icon"></i>
+            <h3>CSS</h3><br> 3 years experience
+        </li>
+        <li>
+            <i class="fab fa-js skill-icon"></i>
+            <h3>JavaScript</h3> <br> 2 years experience
+        </li>
+        <li>
+            <i class="fab fa-react skill-icon"></i>
+            <h3>React</h3> <br> 1.5 years experience
+        </li>
+        <li>
+            <i class="fab fa-node-js skill-icon"></i>
+            <h3>Node.js</h3> <br> 1 year experience
+        </li>
+        <li>
+            <i class="fas fa-database skill-icon"></i>
+            <h3>SQL</h3> <br> 1 year experience
+        </li>
+    </ul>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <ul class="projects">
+        <li>
+            <h3>Chatbot</h3>
+            <p>Developed a secure website integrated with a chatbot for an automotive client using HTML, CSS, JavaScript, and IBM Watson Assistant.</p>
+        </li>
+        <li>
+            <h3>Sentiment Analyzer</h3>
+            <p>Created a sentiment analyzer for the reviews section of an eCommerce platform using NLP techniques.</p>
+        </li>
+        <li>
+            <h3>Task Management App</h3>
+            <p>Built a task management application using React and Node.js, enabling users to create, edit, and delete tasks efficiently.</p>
+        </li>
+        <li>
+            <h3>Portfolio Website</h3>
+            <p>Designed a personal portfolio website to showcase projects and skills using HTML, CSS, and JavaScript.</p>
+        </li>
+        <li>
+            <h3>E-commerce Platform</h3>
+            <p>Developed an e-commerce platform with user authentication, product listing, and shopping cart features using the MERN stack.</p>
+        </li>
+    </ul>
+</section>
+
+<section id="recommendations">
+    <h2>Recommendations</h2>
+    <ul class="recommendations" id="recommendationList">
+        <li>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <strong>Sarah Resler:</strong>
+            <p>"Detail-oriented, efficient, and consistently exceeds expectations."</p>
+        </li>
+        <li>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <strong>Adam Henry:</strong>
+            <p>"Always delivers high-quality work on time."</p>
+        </li>
+        <li>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <strong>Tom Remond:</strong>
+            <p>"Reliable, creative, and always delivers high-quality work!"</p>
+        </li>
+    </ul>
+    <div class="recommendation-form">
+        <h3>Leave a Recommendation</h3>
+        <form id="recommendationForm">
+            <input type="text" placeholder="Your Name" required />
+            <textarea id="recommendationTextarea" rows="4" placeholder="Write your recommendation here..." required></textarea>
+            <button type="submit" id="addTextButton">Submit</button>
+        </form>
+    </div>
+    
+    <ul id="recommendationList"></ul>
+    
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <p>Thank you for your recommendation!</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>
+        <i class="fas fa-envelope"></i> John.wiliam@example.com     | 
+        <i class="fas fa-phone-alt"></i>     (000) 0000-0000
+    </p>
+    <div class="footer-icons">
+        <a href="https://github.com/yourusername" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
